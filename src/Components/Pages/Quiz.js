@@ -58,13 +58,13 @@ function QuizComponent() {
             </div>
             <div>
                 {idNumber > 1 && (
-                    <Link to={`/questions/${idNumber - 1}`}>Prev</Link>
+                    <Link to={`/questions/${idNumber - 1}`}><button className="nav-button">Previous</button></Link>
                 )}
                 {(idNumber <= 4 && localStorage.getItem(`q${id}`)) && (
-                    <Link to={`/questions/${idNumber + 1}`}>Next</Link>
+                    <Link to={`/questions/${idNumber + 1}`}><button className="nav-button">Next</button></Link>
                 )}
                 {(idNumber === 5 && localStorage.getItem(`q${id}`)) && (
-                    <Link to={`/products`}>Discover Your Results</Link>
+                    <Link to={`/products`}><button className="nav-button">Discover Your Results</button></Link>
                 )}
             </div>
             <p>{id}/5</p>

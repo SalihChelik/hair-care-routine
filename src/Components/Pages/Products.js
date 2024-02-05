@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 function Products() {
@@ -35,6 +35,7 @@ function Products() {
                     <li key={product.id}>{product.title}</li>
                 ))}
             </ul>
+            <Link to="/"><button>Retake Quiz</button></Link>
         </div>
     );
 }
